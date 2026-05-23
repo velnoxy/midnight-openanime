@@ -11,7 +11,6 @@
 
 **A dark, minimal CSS theme for [OpenAnime](https://openani.me)**  
 *inspired by [midnight-discord](https://github.com/refact0r/midnight-discord)*
-
 *Made by [Velnoxy](https://guns.lol/velnoxy)*
 
 ![version](https://img.shields.io/badge/version-1.3-8db4f7?style=flat-square)
