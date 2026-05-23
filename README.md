@@ -1,7 +1,7 @@
 <div align="center">
 
 
-<img width="547" height="215" alt="image-removebg-preview (2)" src="https://i.imgur.com/2BdJVda.png" />
+<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/37bedc1f-42f3-456e-9b6b-0f6e0079de42" />
 
 
 **A dark, minimal CSS theme for [OpenAnime](https://openani.me)**  
