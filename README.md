@@ -1,9 +1,8 @@
 <div align="center">
 
-```
+
 <img width="547" height="215" alt="image" src="https://github.com/user-attachments/assets/ae8dbcb2-7419-4efa-8459-9274dee681b2" />
 
-```
 
 **A dark, minimal CSS theme for [OpenAnime](https://openani.me)**  
 *inspired by [midnight-discord](https://github.com/refact0r/midnight-discord)*
