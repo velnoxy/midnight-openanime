@@ -24,8 +24,6 @@
 
 **Midnight**, [refact0r](https://github.com/refact0r)'ın midnight-discord temasından ilham alınarak OpenAnime için sıfırdan yazılmış bir CSS temasıdır. Temel felsefesi sade, koyu ve dikkat dağıtmayan bir arayüz sunmak; animenin önüne geçmemek.
 
-Catppuccin Mocha'nın mor aksanları yerine, gece mavisini (`#8db4f7`) ana renk olarak kullanır. Daha az gürültü, daha fazla içerik.
-
 ---
 
 ## Özellikler
