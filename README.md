@@ -25,12 +25,12 @@
 ## Özellikler
 
 - **Tam koyu tema** — `#111118` taban, `#0d0d14` derinlik rengi
-- **Gece mavisi aksanlar** — mor yerine soğuk, serin bir mavi
+- **Gece mavisi aksanlar** — gri yerine soğuk, serin bir mavi
 - **Inter font** — daha temiz duran bir font
 - **Minimal cam efekti** — `backdrop-filter` ile hafif derinlik, abartısız
 - **İnce scrollbar** — 6px, görünmez olmak üzere tasarlandı
 - **Hafif ortam ışığı** — animasyonsuz, sakin arka plan parıltısı
-- **Hem dark hem light mod** — light modda "Midnight Mist" paleti
+- **Hem dark hem light mod** — light modda "Midnight Mist" paleti kullanılıyor. yaxı rengi düzeltilecek
 - **Responsive** — mobil boyutlarda köşe yarıçapları otomatik küçülür
 
 ---
