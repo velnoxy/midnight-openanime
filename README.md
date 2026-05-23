@@ -30,7 +30,7 @@
 - **Minimal cam efekti** — `backdrop-filter` ile hafif derinlik, abartısız
 - **İnce scrollbar** — 6px, görünmez olmak üzere tasarlandı
 - **Hafif ortam ışığı** — animasyonsuz, sakin arka plan parıltısı
-- **Hem dark hem light mod** — light modda "Midnight Mist" paleti kullanılıyor. yaxı rengi düzeltilecek
+- **Hem dark hem light mod** — light modda "Midnight Mist" paleti kullanılıyor.
 - **Responsive** — mobil boyutlarda köşe yarıçapları otomatik küçülür
 
 ---
