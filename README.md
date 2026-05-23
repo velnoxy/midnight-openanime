@@ -38,7 +38,7 @@
 ## Kurulum
 
 
-Releases kıdmındaki en son güncellenmiş `midnight.css` dosyasının indirip bu şekilde kurulumunu yapabilirsin.
+Releases kıdmındaki en son güncellenmiş `midnight.css` dosyasını indirip bu şekilde kurulumunu yapabilirsin.
 
 <img width="720" height="405" alt="ezgif-75a7a77c20c4bbc1" src="https://github.com/user-attachments/assets/dfd6b33f-33ed-4bd4-9590-7dec330722e8" />
 
