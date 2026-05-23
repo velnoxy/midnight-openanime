@@ -9,7 +9,7 @@
 *Made by [Velnoxy](https://guns.lol/velnoxy)*
 
 [![version](https://img.shields.io/badge/version-1.4-8db4f7?style=flat-square)](https://github.com/velnoxy/midnight-openanime/releases/tag/V1.4)
-![platform](https://img.shields.io/badge/platform-OpenAnime-8db4f7?style=flat-square)
+[![platform](https://img.shields.io/badge/platform-OpenAnime-8db4f7?style=flat-square)](https://www.openani.me)
 ![license](https://img.shields.io/badge/license-MIT-6b9ef5?style=flat-square)
 
 </div>
