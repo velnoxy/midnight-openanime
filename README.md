@@ -47,7 +47,7 @@ Releases kıdmındaki en son güncellenmiş `midnight.css` dosyasını indirip b
 
 
 
-## Ekran Görüntüleri
+## Ekran Görüntüleri(V1.2'den olduğu için güncellenecek)
 
 <img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/b1a5db82-bcc8-4f61-8508-04470d3d9025" />
 <img width="1919" height="1000" alt="image" src="https://github.com/user-attachments/assets/cd71d31d-9155-4a04-bba1-e906e5a5ec0e" />
