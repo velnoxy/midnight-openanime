@@ -8,7 +8,7 @@
 *inspired by [midnight-discord](https://github.com/refact0r/midnight-discord)*
 *Made by [Velnoxy](https://guns.lol/velnoxy)*
 
-[![version](https://img.shields.io/badge/version-1.4-8db4f7?style=flat-square)](https://github.com/velnoxy/midnight-openanime/releases/tag/V1.4)
+[![version](https://img.shields.io/badge/version-1.5-8db4f7?style=flat-square)](https://github.com/velnoxy/midnight-openanime/releases/tag/V1.5)
 [![platform](https://img.shields.io/badge/platform-OpenAnime-8db4f7?style=flat-square)](https://www.openani.me)
 ![license](https://img.shields.io/badge/license-MIT-6b9ef5?style=flat-square)
 
@@ -47,15 +47,17 @@ Releases kıdmındaki en son güncellenmiş `midnight.css` dosyasını indirip b
 
 
 
-## Ekran Görüntüleri(V1.2'den olduğu için güncellenecek)
+## Ekran Görüntüleri
 
-<img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/b1a5db82-bcc8-4f61-8508-04470d3d9025" />
-<img width="1919" height="1000" alt="image" src="https://github.com/user-attachments/assets/cd71d31d-9155-4a04-bba1-e906e5a5ec0e" />
-<img width="1919" height="998" alt="image" src="https://github.com/user-attachments/assets/0dad0565-320e-43a5-ba76-bf11ce95b4a3" />
-<img width="1919" height="996" alt="image" src="https://github.com/user-attachments/assets/3c296597-39d2-4d8d-8774-e9c6acc1af1b" />
-<img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/a4ba8cc9-3926-4917-8b65-b835446ef335" />
-<img width="1919" height="1000" alt="image" src="https://github.com/user-attachments/assets/7ad8fdc7-5bd6-4744-a737-0fa9058a2cad" />
-<img width="1919" height="1000" alt="image" src="https://github.com/user-attachments/assets/fb72e54f-7b79-498f-87f8-5fa96497cc9b" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a35d2bdf-45bd-42cc-acc3-defba42e7ea1" />
+<img width="1916" height="1079" alt="image" src="https://github.com/user-attachments/assets/371e6b99-d1cb-4030-afdf-05652fdc8f39" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b5a261ba-e813-41af-86ae-e9a6e5c9f5d7" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/04586ef2-12a9-463f-873b-caa391231788" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4c7249de-951e-4c3a-976e-b863e85fd87b" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/3a271529-810c-4f9c-b48c-80be88d6de42" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e4d223ad-0750-498d-be07-7b6dcfccceb6" />
+
+
 
 
 ---
