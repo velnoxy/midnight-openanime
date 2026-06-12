@@ -1,0 +1,1702 @@
+/*
+    ╔══════════════════════════════════════════╗
+    ║      MIDNIGHT AKAI — OpenAnime Theme     ║
+    ║   inspired by refact0r/midnight-discord  ║
+    ║            v1.1  •  2026                 ║ 
+    ║            Made by Velnoxy               ║
+    ╚══════════════════════════════════════════╝
+*/
+
+/* Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* TAN Nimbus — logo (dosya adı: TAN - NIMBUS) */
+@font-face {
+    font-family: 'TAN - NIMBUS';
+    src: url('https://raw.githubusercontent.com/velnoxy/midnight-openanime/main/versions/TAN-NIMBUS.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ========================================
+   GLOBAL VARIABLES
+   ======================================== */
+:root {
+    --font-primary: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-comments: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-logo: 'TAN - NIMBUS', 'TAN NIMBUS', sans-serif;
+    --font-logo-size: 15px;
+    --font-logo-weight: normal;
+
+    --logo-size-desktop: 20px;
+    --logo-size-mobile: 18px;
+    --logo-spacing: 10px;
+    --logo-offset-y: 1px;
+    --border-width: 1px;
+    --border-selected: 2px;
+    --progress-height: 3px;
+    --banner-progress: 2px;
+
+    --radius-base: 10px;
+    --radius-card: 12px;
+    --radius-banner: 0 0 12px 12px;
+
+    --transition-fast: 0.15s;
+    --transition-base: 0.2s;
+    --transition-smooth: 0.3s;
+
+    --logo-padding: 4px 8px;
+    --banner-padding: 12px 16px;
+
+    /* Midnight logo icon (clock — subtle, monochrome) */
+    --url-logo: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ff5e72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>');
+
+    --fds-control-corner-radius: var(--radius-base) !important;
+    --fds-overlay-corner-radius: var(--radius-base) !important;
+}
+
+
+/* ========================================
+   THEME COLORS — DARK MODE (Midnight)
+   ======================================== */
+:root,
+html.fds-theme-dark,
+html.dark,
+html.dark-theme,
+html[data-theme="dark"] {
+    /* Midnight palette */
+    --mn-bg0: #0d0d14;
+    /* deepest background */
+    --mn-bg1: #111118;
+    /* base */
+    --mn-bg2: #16161f;
+    /* panels */
+    --mn-bg3: #1c1c27;
+    /* cards */
+    --mn-bg4: #222233;
+    /* card hover / raised */
+    --mn-border0: #1e1e2e;
+    --mn-border1: rgba(255, 94, 114, 0.12);
+    --mn-border2: rgba(255, 94, 114, 0.25);
+
+    --mn-blue: #ff7e93;
+    /* primary accent */
+    --mn-blue2: #ff4a66;
+    --mn-ice: #ffcbd2;
+    /* soft highlight */
+    --mn-white: #e8eaf2;
+    --mn-sub1: #9da3bb;
+    --mn-sub2: #6b7190;
+    --mn-muted: #4a4f68;
+
+    --accent-primary: #ff3350;
+    --accent-secondary: #ffcbd2;
+    --accent-tertiary: #ff4a66;
+
+    --link-color: #ff7e93;
+    --link-color-hover: #ffcbd2;
+
+    --bg-page: #111118;
+    --bg-layer: rgba(13, 13, 20, 0.7);
+    --bg-card: rgba(22, 22, 31, 0.6);
+    --bg-card-hover: rgba(34, 34, 51, 0.75);
+    --bg-menu-hover: rgba(255, 94, 114, 0.06);
+    --bg-menu-selected: rgba(255, 94, 114, 0.12);
+    --bg-control: rgba(255, 94, 114, 0.04);
+    --bg-layer-solid: rgba(17, 17, 24, 0.95);
+
+    --text-primary: #e8eaf2;
+    --text-secondary: #ff5e72;
+    --text-muted: rgba(157, 163, 187, 0.55);
+
+    --border-card: rgba(255, 94, 114, 0.1);
+    --border-card-hover: rgba(255, 94, 114, 0.22);
+    --border-selected: rgba(255, 94, 114, 0.45);
+
+    --shadow-glow: 0 0 14px rgba(255, 94, 114, 0.2);
+    --shadow-glow-strong: 0 0 24px rgba(255, 94, 114, 0.35);
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.5);
+
+    --gradient-bg: radial-gradient(ellipse at top, rgba(255, 94, 114, 0.05) 0%, transparent 55%),
+        linear-gradient(180deg, #111118 0%, #0d0d14 60%, #111118 100%);
+}
+
+/* ========================================
+   THEME COLORS — LIGHT MODE (Midnight Mist)
+   ======================================== */
+html.fds-theme-light,
+html.light,
+html.light-theme,
+html[data-theme="light"] {
+    --accent-primary: #dc2626;
+    --accent-secondary: #b91c1c;
+    --accent-tertiary: #ef4444;
+
+    --link-color: #dc2626;
+    --link-color-hover: #b91c1c;
+
+    --bg-page: #f4f5f8;
+    --bg-layer: rgba(230, 232, 240, 0.8);
+    --bg-card: rgba(244, 245, 248, 0.9);
+    --bg-card-hover: rgba(220, 224, 235, 0.95);
+    --bg-menu-hover: rgba(220, 38, 38, 0.06);
+    --bg-menu-selected: rgba(220, 38, 38, 0.10);
+    --bg-control: rgba(220, 38, 38, 0.04);
+    --bg-layer-solid: rgba(244, 245, 248, 0.97);
+
+    --text-primary: #1a1d2e;
+    --text-secondary: #dc2626;
+    --text-muted: rgba(26, 29, 46, 0.45);
+
+    --border-card: rgba(220, 38, 38, 0.15);
+    --border-card-hover: rgba(220, 38, 38, 0.3);
+    --border-selected: rgba(220, 38, 38, 0.55);
+
+    --shadow-glow: 0 0 12px rgba(220, 38, 38, 0.15);
+    --shadow-glow-strong: 0 0 20px rgba(220, 38, 38, 0.28);
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    --gradient-bg: radial-gradient(ellipse at top right, rgba(220, 38, 38, 0.06) 0%, transparent 55%),
+        linear-gradient(180deg, #f4f5f8 0%, #e8eaf2 100%);
+}
+
+/* Fallback — matches dark */
+html:not(.fds-theme-light):not(.fds-theme-dark):not(.light):not(.light-theme):not([data-theme="light"]) {
+    --accent-primary: #ff5e72;
+    --accent-secondary: #ffcbd2;
+    --accent-tertiary: #ff4a66;
+
+    --link-color: #ff7e93;
+    --link-color-hover: #ffcbd2;
+    --bg-page: #111118;
+    --bg-layer: rgba(13, 13, 20, 0.7);
+    --bg-card: rgba(22, 22, 31, 0.6);
+    --bg-card-hover: rgba(34, 34, 51, 0.75);
+    --bg-menu-hover: rgba(255, 94, 114, 0.06);
+    --bg-menu-selected: rgba(255, 94, 114, 0.12);
+    --bg-control: rgba(255, 94, 114, 0.04);
+    --bg-layer-solid: rgba(17, 17, 24, 0.95);
+    --text-primary: #e8eaf2;
+    --text-secondary: #ff5e72;
+    --text-muted: rgba(157, 163, 187, 0.55);
+    --border-card: rgba(255, 94, 114, 0.1);
+    --border-card-hover: rgba(255, 94, 114, 0.22);
+    --border-selected: rgba(255, 94, 114, 0.45);
+    --shadow-glow: 0 0 14px rgba(255, 94, 114, 0.2);
+    --shadow-glow-strong: 0 0 24px rgba(255, 94, 114, 0.35);
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.5);
+    --gradient-bg: radial-gradient(ellipse at top, rgba(255, 94, 114, 0.05) 0%, transparent 55%),
+        linear-gradient(180deg, #111118 0%, #0d0d14 60%, #111118 100%);
+}
+
+
+/* ========================================
+   RESET & BASE
+   ======================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background-color: var(--bg-page);
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    letter-spacing: -0.005em;
+}
+
+body,
+.page,
+.scene-inner-content,
+.openanime-scene-controller,
+.os-viewport {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+}
+
+/* Solid bg layer */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: var(--gradient-bg);
+    background-attachment: fixed;
+}
+
+/* Very subtle ambient glow — less animated than mocha */
+body::before {
+    content: '';
+    position: fixed;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    pointer-events: none;
+    z-index: -2;
+    background:
+        radial-gradient(ellipse at 30% 20%, rgba(255, 94, 114, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(255, 74, 102, 0.03) 0%, transparent 50%);
+    opacity: 0.8;
+}
+
+
+/* ========================================
+   LIBRARY PAGE BACKGROUND
+   ======================================== */
+.scene-inner-content:has(.new-playlist)>.banner.gradient-scene {
+    background-image: url("https://i.imgur.com/2BdJVda.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+
+/* ========================================
+   TEXT INPUT
+   ======================================== */
+.text-box-container.svelte-f1dfkg.svelte-f1dfkg {
+    background-color: var(--bg-control);
+    border: 1px solid var(--border-card);
+    backdrop-filter: blur(12px) saturate(120%);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-base) ease;
+    border-radius: var(--radius-base);
+}
+
+.text-box-container.svelte-f1dfkg.svelte-f1dfkg:focus-within {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(255, 94, 114, 0.12), var(--shadow-card);
+}
+
+
+/* ========================================
+   COMMENTS POPUP
+   ======================================== */
+.comments.svelte-1owsd24,
+.comments.svelte-gczzal,
+.comments.fds-theme-dark.svelte-gczzal,
+.comments.fds-theme-dark {
+    color: var(--text-primary) !important;
+    padding: 14px !important;
+    border-radius: var(--radius-base) !important;
+    border: 1px solid var(--border-card) !important;
+    background: linear-gradient(180deg, #16161f 0%, #111118 100%) !important;
+    backdrop-filter: blur(24px) saturate(140%) !important;
+    box-shadow: 0 0 24px rgba(255, 94, 114, 0.08), var(--shadow-card) !important;
+    min-width: 26rem;
+    max-width: 32rem;
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    overflow: hidden;
+}
+
+.comments.svelte-1owsd24::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent-primary) 50%, transparent 100%);
+    opacity: 0.3;
+}
+
+.inner-comments.svelte-1owjemh {
+    background-color: transparent;
+    padding: 8px;
+    min-width: 20rem;
+    max-width: 26rem;
+}
+
+.input-wrapper.svelte-1owjemh {
+    padding: 10px;
+    background-color: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-base);
+    border: 1px solid var(--border-card);
+    gap: 8px;
+    transition: all var(--transition-base) ease;
+}
+
+.input-wrapper.svelte-1owjemh:focus-within {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(255, 94, 114, 0.1);
+}
+
+.comment.svelte-1snun1g {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-base);
+    margin-block: 5px;
+    padding: 10px;
+    width: 100% !important;
+    transition: all var(--transition-base) ease;
+    position: relative;
+}
+
+.comment.svelte-1snun1g:hover {
+    border-color: var(--border-card-hover);
+    transform: translateX(2px);
+}
+
+.wrapper.svelte-1snun1g {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    min-width: 0;
+}
+
+.message.svelte-1snun1g {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.emojified.svelte-1snun1g,
+.message.svelte-1snun1g .content.svelte-1snun1g .emojified.svelte-1snun1g,
+.comment.svelte-1snun1g .emojified {
+    font-family: var(--font-comments) !important;
+    font-weight: 400 !important;
+    display: inline !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: var(--text-primary) !important;
+}
+
+.content.svelte-1snun1g {
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: var(--text-primary) !important;
+    position: relative !important;
+    padding-bottom: 22px !important;
+}
+
+.misc.svelte-1snun1g {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.wrapper.svelte-1snun1g {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 3px !important;
+    min-width: 0;
+    flex: 1 !important;
+    width: 100% !important;
+}
+
+.content.svelte-1snun1g::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.likes.svelte-1snun1g {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-top: -22px !important;
+    margin-left: 120px !important;
+}
+
+.likes.svelte-1snun1g .icon-button,
+.likes.svelte-1snun1g button {
+    padding: 2px 5px !important;
+    font-size: 0.75rem !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.misc.svelte-1snun1g>.text-block.type-caption:first-child {
+    padding: 4px 8px;
+    background: var(--bg-card);
+    border-radius: 6px;
+    border: 1px solid var(--border-card);
+    backdrop-filter: blur(6px);
+}
+
+
+/* ========================================
+   FONT SCALING
+   ======================================== */
+
+/* Banner title */
+#banner h2,
+#banner h1,
+#banner .text-block.type-title-large,
+h2.type-title-large,
+.type-title-large,
+[id*="banner"] h1,
+[id*="banner"] h2,
+[class*="banner"] h1,
+[class*="banner"] h2,
+[class*="banner"] .text-block.type-title,
+[class*="featured"] h1,
+[class*="featured"] h2,
+[class*="hero"] h1,
+[class*="hero"] h2,
+.scene-inner-content h1,
+.scene-inner-content h2,
+.scene-inner-content .text-block.type-title,
+.openanime-scene-controller h1,
+.openanime-scene-controller h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: calc(1em * 2.2) !important;
+    letter-spacing: -0.03em !important;
+}
+
+/* Slider card hover */
+.slider-card:hover h5,
+.slider-card:hover h5#name,
+.slider-card:hover .anime-name,
+.slider-card:hover .text-block,
+.slider-card:hover .text-block.type-body-strong {
+    font-size: calc(1em * 0.8) !important;
+}
+
+/* Slider card selected */
+.slider-card.selected h5,
+.slider-card.selected h5#name,
+.slider-card.selected .anime-name,
+.slider-card.selected .text-block,
+.slider-card.selected .text-block.type-body-strong {
+    font-size: calc(1em * 0.8) !important;
+}
+
+/* Slider card default */
+.slider-card h5,
+.slider-card h5#name,
+.slider-card .anime-name,
+.slider-card .text-block,
+.slider-card .text-block.type-body-strong {
+    font-size: calc(1em * 0.8) !important;
+}
+
+/* Search autocomplete titles */
+.auto-suggest-box-flyout .anime-name,
+.auto-suggest-box-flyout h5,
+[class*="auto-suggest"] .anime-name,
+[class*="auto-suggest"] .text-block.type-body-strong,
+[class*="suggest"] .anime-name,
+.search-result .anime-name {
+    font-size: calc(1em * 1.05) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Search autocomplete description */
+.auto-suggest-box-flyout .text-block.type-body,
+.auto-suggest-box-flyout .text-block.type-caption,
+.auto-suggest-box-flyout p,
+.auto-suggest-box-flyout span:not(.anime-name),
+[class*="auto-suggest"] .text-block.type-body,
+[class*="auto-suggest"] .text-block.type-caption,
+.search-result p,
+.search-result .description {
+    font-size: calc(1em * 0.8) !important;
+}
+
+/* Logo text size — logo ::after hariç (logo kendi boyutunu kullanır) */
+.text-block.type-title,
+h1.text-block,
+h2.text-block.type-title {
+    font-size: calc(1em * 1.3) !important;
+}
+
+
+/* ========================================
+   ANIME TITLES
+   ======================================== */
+.text-block.type-title,
+h1.text-block,
+h2.text-block.type-title {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em !important;
+}
+
+.anime-card .anime-name,
+.anime-card h5,
+.anime-card .text-block,
+.slider-card .anime-name,
+.slider-card h5,
+.slider-card h5#name,
+a.anime-card .text-block.type-body-strong,
+a.anime-card .text-block.type-body,
+.anime-name.svelte-9tjxrp,
+#content.svelte-1w17qyc .anime-name,
+#content.svelte-1w17qyc h5,
+.explore-card .anime-name,
+.trending-card .anime-name,
+.popular-card .anime-name,
+.recent-card .anime-name,
+.featured-card .anime-name,
+[class*="anime-card"] .anime-name,
+[class*="anime-card"] h5,
+[class*="card"] .anime-name {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.calendar-card .text-block.type-body-large-strong,
+.calendar-card .text-block.type-body-strong,
+.calendar-card .anime-name,
+.calendar-card h5 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.auto-suggest-box-flyout .text-block.type-body,
+.auto-suggest-box-flyout .anime-name,
+.search-result .anime-name {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: calc(1em * 1.05) !important;
+}
+
+
+/* ========================================
+   CARDS
+   ======================================== */
+.calendar-card,
+a.anime-card,
+.slider-card {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: var(--radius-card) !important;
+    background-color: var(--bg-card) !important;
+    box-shadow: 0 0 0 1px var(--border-card), var(--shadow-card) !important;
+    border: none !important;
+    transition: all var(--transition-base) ease;
+    backdrop-filter: blur(14px) saturate(120%);
+}
+
+.calendar-card:hover,
+a.anime-card:hover,
+.slider-card:hover,
+[class*="card"]:hover {
+    box-shadow: 0 0 0 1px var(--border-card-hover), var(--shadow-card), var(--shadow-glow) !important;
+    transform: translateY(-2px);
+}
+
+.calendar-card img,
+a.anime-card img {
+    border-radius: var(--radius-card) !important;
+}
+
+a.anime-card.svelte-1w17qyc img#main {
+    -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, black 55%, transparent 100%) !important;
+}
+
+.anime-name.svelte-9tjxrp {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+#content.svelte-1w17qyc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 65%, transparent 100%);
+}
+
+.other.svelte-1w17qyc span {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+}
+
+
+/* ========================================
+   SIDEBAR / NAV ITEMS
+   ======================================== */
+.list-item:not(.selected) {
+    background-color: transparent !important;
+    transition: all var(--transition-fast) ease;
+    border-radius: var(--radius-base);
+}
+
+.list-item:hover:not(.selected) {
+    background-color: var(--bg-menu-hover) !important;
+}
+
+.list-item.selected {
+    background-color: var(--bg-menu-selected) !important;
+    backdrop-filter: blur(12px) saturate(130%);
+    border-left: 2px solid var(--accent-primary) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 94, 114, 0.12);
+    border-radius: var(--radius-base);
+}
+
+.list-item:not(:has(#lottie-player)) svg path {
+    fill: var(--text-muted) !important;
+    transition: fill var(--transition-fast) ease;
+}
+
+.list-item [id="label"] {
+    color: var(--text-muted) !important;
+    transition: color var(--transition-fast) ease;
+    font-weight: 500;
+}
+
+.list-item:hover:not(.selected):not(:has(#lottie-player)) svg path {
+    fill: var(--text-muted) !important;
+    color: var(--text-muted) !important;
+}
+
+.list-item:hover:not(.selected):has(#lottie-player) svg path,
+.list-item:hover:not(.selected) #lottie-player svg path {
+    fill: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+}
+
+.list-item:hover [id="label"] {
+    color: var(--text-primary) !important;
+}
+
+.list-item.selected:not(:has(#lottie-player)) svg path,
+.list-item.selected:not(:has(#lottie-player)) svg,
+.list-item.selected #lottie-player svg path {
+    fill: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+}
+
+.list-item.selected [id="label"] {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   LOGO — tek ikon + tek yazı, tamamı tıklanabilir
+   ======================================== */
+.topbar a.logo,
+.topbar a.logo-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: var(--logo-spacing) !important;
+    padding: var(--logo-padding) !important;
+    margin: auto 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: opacity var(--transition-fast) ease;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    -webkit-app-region: no-drag !important;
+}
+
+.topbar a.logo:hover,
+.topbar a.logo-button:hover {
+    background: transparent !important;
+    opacity: 0.88;
+}
+
+/* Orijinal OpenAnime içeriği (ikon, yazı, rozet) */
+.topbar a.logo img,
+.topbar a.logo svg,
+.topbar a.logo .text-block,
+.topbar a.logo #badge,
+.topbar a.logo .enhanced-badge,
+.topbar a.logo-button img,
+.topbar a.logo-button svg,
+.topbar a.logo-button .text-block,
+.topbar a.logo-button #badge,
+.topbar a.logo-button .enhanced-badge {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* İç içe logo: sadece taşıyıcı, kendi pseudo elementi yok */
+.topbar a.logo-button>a.logo,
+.topbar a.logo-button>.logo {
+    display: contents !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    gap: 0 !important;
+}
+
+.topbar a.logo-button a.logo::before,
+.topbar a.logo-button a.logo::after,
+.topbar a.logo-button>.logo::before,
+.topbar a.logo-button>.logo::after {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+}
+
+/* Ay + Midnight */
+.topbar a.logo::before,
+.topbar a.logo-button::before {
+    content: '' !important;
+    display: block !important;
+    align-self: center !important;
+    width: var(--logo-size-desktop) !important;
+    height: var(--logo-size-desktop) !important;
+    min-width: var(--logo-size-desktop) !important;
+    flex-shrink: 0 !important;
+    background: var(--url-logo) no-repeat center / contain !important;
+    filter: drop-shadow(0 0 6px rgba(255, 94, 114, 0.35));
+    pointer-events: none !important;
+}
+
+.topbar a.logo::after,
+.topbar a.logo-button::after {
+    content: 'Midnight Akai' !important;
+    display: flex !important;
+    align-items: center !important;
+    align-self: center !important;
+    height: var(--logo-size-desktop) !important;
+    font-family: var(--font-logo) !important;
+    font-size: var(--font-logo-size) !important;
+    font-weight: var(--font-logo-weight) !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    color: var(--accent-secondary) !important;
+    -webkit-text-fill-color: var(--accent-secondary) !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    transform: translateY(var(--logo-offset-y)) !important;
+    pointer-events: none !important;
+}
+
+header.mobile-topbar .homepage-nav::before {
+    content: '' !important;
+    width: var(--logo-size-mobile);
+    height: var(--logo-size-mobile);
+    background: var(--url-logo) no-repeat center !important;
+    background-size: contain !important;
+    filter: drop-shadow(0 0 6px rgba(255, 94, 114, 0.35));
+}
+
+
+/* ========================================
+   SLIDER CARDS
+   ======================================== */
+.slider-card {
+    position: relative !important;
+    border-radius: var(--radius-card) !important;
+    transition: all var(--transition-base) ease !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.slider-card:hover {
+    box-shadow: 0 0 0 2px var(--accent-primary), var(--shadow-glow) !important;
+    outline: none !important;
+    border-color: var(--accent-primary) !important;
+}
+
+.slider-card.selected {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 2px var(--accent-primary), var(--shadow-glow) !important;
+    outline: none !important;
+    border-color: var(--accent-primary) !important;
+}
+
+.slider-card h5#name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
+    color: var(--text-primary) !important;
+    border-radius: var(--radius-banner);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+.slider-card.selected #progress {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--banner-progress) !important;
+    background: linear-gradient(90deg, var(--accent-tertiary) 0%, var(--accent-primary) 100%);
+    box-shadow: 0 0 8px rgba(255, 94, 114, 0.5);
+}
+
+
+/* ========================================
+   VIDEO PLAYER
+   ======================================== */
+.bottom-controls {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border-top: none !important;
+    padding: 10px 14px !important;
+}
+
+.slider.orientation-horizontal {
+    block-size: var(--progress-height) !important;
+    color: var(--accent-primary) !important;
+    filter: drop-shadow(0 0 4px rgba(255, 94, 114, 0.4)) !important;
+    border-radius: 4px !important;
+}
+
+.openanime-scene-controller button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    padding: 5px;
+    backdrop-filter: blur(8px) saturate(120%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all var(--transition-fast) ease;
+    color: #ffffff !important;
+}
+
+.bottom-controls button {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    transition: all var(--transition-fast) ease;
+}
+
+.openanime-scene-controller button svg,
+.bottom-controls button svg,
+.openanime-scene-controller button svg path,
+.bottom-controls button svg path {
+    fill: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.openanime-scene-controller button:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.bottom-controls button:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.button.icon-button {
+    background-color: rgba(17, 17, 24, 0.5);
+    border: 1px solid rgba(255, 94, 114, 0.15);
+    border-radius: 7px;
+    padding: 5px;
+    backdrop-filter: blur(8px) saturate(120%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    transition: all var(--transition-fast) ease;
+}
+
+.button.icon-button:hover {
+    background-color: rgba(255, 94, 114, 0.2) !important;
+    border-color: rgba(255, 94, 114, 0.4) !important;
+    box-shadow: 0 4px 12px rgba(255, 94, 114, 0.2) !important;
+}
+
+
+/* ========================================
+   BADGES & HIGHLIGHTS
+   ======================================== */
+.released-badge {
+    color: var(--accent-primary) !important;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(255, 94, 114, 0.3);
+}
+
+.enhanced-highlight {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-tertiary) 100%) !important;
+    border-radius: 6px;
+    padding: 4px 10px;
+    box-shadow: var(--shadow-glow);
+}
+
+.enhanced-highlight .text-block {
+    color: #0d0d14 !important;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   TOGGLE SWITCH
+   ======================================== */
+.toggle-switch,
+input[type="checkbox"][role="switch"] {
+    width: 44px;
+    height: 24px;
+    background: rgba(17, 17, 24, 0.5);
+    border: 1px solid var(--border-card);
+    border-radius: 24px;
+    transition: all var(--transition-smooth) ease;
+    backdrop-filter: blur(8px);
+}
+
+.toggle-switch::before,
+input[type="checkbox"][role="switch"]::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 17px;
+    height: 17px;
+    background: rgba(157, 163, 187, 0.5);
+    border-radius: 50%;
+    transition: all var(--transition-smooth) ease;
+}
+
+.toggle-switch:checked,
+input[type="checkbox"][role="switch"]:checked {
+    background: linear-gradient(135deg, var(--accent-tertiary) 0%, var(--accent-primary) 100%) !important;
+    border-color: var(--accent-primary) !important;
+    box-shadow: var(--shadow-glow);
+}
+
+.toggle-switch:checked::before,
+input[type="checkbox"][role="switch"]:checked::before {
+    left: 22px;
+    background: rgba(232, 234, 242, 0.95);
+}
+
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 94, 114, 0.25);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 94, 114, 0.45);
+}
+
+
+/* ========================================
+   INPUTS & FORMS
+   ======================================== */
+input,
+textarea {
+    background-color: var(--bg-control) !important;
+    border: 1px solid var(--border-card) !important;
+    border-radius: var(--radius-base) !important;
+    color: var(--text-primary) !important;
+    transition: all var(--transition-base) ease !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 400 !important;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent-primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(255, 94, 114, 0.15) !important;
+    background-color: var(--bg-card) !important;
+}
+
+button,
+.button {
+    transition: all var(--transition-base) ease !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 500;
+}
+
+a {
+    color: var(--link-color) !important;
+    text-decoration: none;
+    transition: color var(--transition-base) ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--link-color-hover) !important;
+}
+
+/* Tıklanabilir metin linkleri — hover'da daire/kapsül değil, hafif köşe */
+a.button[class*="style-hyperlink"],
+button.button[class*="style-hyperlink"],
+.button[class*="style-hyperlink"],
+[class*="split-button"] button[class*="style-hyperlink"],
+.text-block a.button,
+.text-block.type-body a.button,
+.text-block.type-caption a.button,
+.scene-inner-content a.button,
+.openanime-scene-controller a.button,
+#banner a.button,
+[class*="banner"] a.button,
+[class*="fansub"] a.button,
+.gradient-scene a.button {
+    border-radius: 4px !important;
+    padding-block: 1px 2px !important;
+    padding-inline: 5px !important;
+    min-height: unset !important;
+    min-width: unset !important;
+}
+
+a.button[class*="style-hyperlink"]:hover,
+button.button[class*="style-hyperlink"]:hover,
+.button[class*="style-hyperlink"]:hover,
+[class*="split-button"] button[class*="style-hyperlink"]:hover,
+.text-block a.button:hover,
+.scene-inner-content a.button:hover,
+.openanime-scene-controller a.button:hover,
+#banner a.button:hover,
+[class*="banner"] a.button:hover,
+[class*="fansub"] a.button:hover,
+.gradient-scene a.button:hover {
+    border-radius: 4px !important;
+}
+
+/* Paragraf / metadata içi linkler */
+.scene-inner-content a[href]:not(.logo):not(.anime-card),
+.openanime-scene-controller a[href]:not(.logo),
+#banner a[href]:not(.logo),
+[class*="banner"] a[href]:not(.logo),
+[class*="fansub"] a[href],
+.gradient-scene a[href],
+.text-block.type-body a[href],
+.text-block.type-caption a[href] {
+    color: var(--link-color) !important;
+    border-radius: 4px !important;
+}
+
+.scene-inner-content a[href]:not(.logo):hover,
+.openanime-scene-controller a[href]:hover,
+#banner a[href]:hover,
+[class*="banner"] a[href]:hover,
+[class*="fansub"] a[href]:hover,
+.gradient-scene a[href]:hover,
+.text-block.type-body a[href]:hover,
+.text-block.type-caption a[href]:hover {
+    color: var(--link-color-hover) !important;
+    border-radius: 4px !important;
+}
+
+::selection {
+    background-color: rgba(255, 94, 114, 0.3);
+    color: var(--text-primary);
+}
+
+*:focus-visible {
+    outline: 1px solid var(--accent-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(255, 94, 114, 0.15);
+    border-radius: 4px;
+}
+
+
+/* ========================================
+   EPISODES PANEL
+   ======================================== */
+.episodes.fds-theme-dark {
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(17, 17, 24, 0.8) 100%) !important;
+    backdrop-filter: blur(20px) saturate(130%);
+    padding: 16px;
+    border-radius: var(--radius-base);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-glow);
+}
+
+.episodes .player-episode-list-item {
+    background: var(--bg-card);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-base);
+    margin-block: 10px;
+    padding: 12px;
+    transition: all var(--transition-base) ease;
+}
+
+.episodes .player-episode-list-item:hover {
+    border-color: var(--border-card-hover);
+    transform: translateX(4px);
+}
+
+.episodes .player-episode-list-item.currentEpisode {
+    border-color: var(--accent-primary);
+    border-left: 2px solid var(--accent-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+
+/* ========================================
+   FDS THEME TOKENS
+   ======================================== */
+:root,
+.fds-theme-dark,
+html:not(.fds-theme-light):not(.fds-theme-dark) {
+    --fds-text-primary: var(--text-primary) !important;
+    --fds-text-secondary: var(--text-secondary) !important;
+    --fds-accent-default: var(--accent-primary) !important;
+    --fds-accent-secondary: var(--accent-secondary) !important;
+    --fds-accent-tertiary: var(--accent-tertiary) !important;
+    --fds-card-background-default: var(--bg-card) !important;
+    --fds-focus-stroke-outer: var(--accent-primary) !important;
+    --fds-focus-stroke-inner: var(--accent-primary) !important;
+    --fds-control-strong-stroke-default: var(--accent-primary) !important;
+    --fds-card-stroke-default: var(--border-card) !important;
+    --fds-subtle-fill-secondary: var(--bg-menu-hover) !important;
+    --fds-subtle-fill-tertiary: var(--bg-menu-selected) !important;
+    accent-color: var(--accent-primary) !important;
+}
+
+.fds-theme-light {
+    --fds-text-primary: var(--text-primary) !important;
+    --fds-text-secondary: var(--text-secondary) !important;
+    --fds-accent-default: var(--accent-primary) !important;
+    --fds-accent-secondary: var(--accent-secondary) !important;
+    --fds-accent-tertiary: var(--accent-tertiary) !important;
+    --fds-card-background-default: var(--bg-card) !important;
+    --fds-focus-stroke-outer: var(--accent-primary) !important;
+    --fds-focus-stroke-inner: var(--accent-primary) !important;
+    --fds-control-strong-stroke-default: var(--accent-primary) !important;
+    --fds-card-stroke-default: var(--border-card) !important;
+    accent-color: var(--accent-primary) !important;
+}
+
+
+/* ========================================
+   COMMENTS SIDEBAR
+   ======================================== */
+.comments-sidebar,
+[class*="comments-panel"],
+[class*="comment-sidebar"],
+.side-panel.comments,
+aside.comments {
+    background: linear-gradient(180deg, rgba(22, 22, 31, 0.97) 0%, rgba(17, 17, 24, 0.99) 100%) !important;
+    backdrop-filter: blur(20px) saturate(130%) !important;
+    border-left: 1px solid var(--border-card) !important;
+    font-family: var(--font-primary) !important;
+}
+
+.comments-sidebar h2,
+.comments-sidebar h3,
+.comments-sidebar .header,
+.comments-sidebar [class*="title"],
+[class*="comments-panel"] h2,
+[class*="comments-panel"] h3,
+[class*="comment-header"],
+.side-panel.comments h2,
+.side-panel.comments h3 {
+    color: var(--text-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    letter-spacing: -0.01em !important;
+    padding: 14px 18px !important;
+    border-bottom: 1px solid var(--border-card) !important;
+}
+
+.comments-sidebar .count,
+.comments-sidebar [class*="count"],
+.comments-sidebar .subtitle,
+[class*="comments-panel"] .count,
+[class*="comment-count"] {
+    color: var(--text-muted) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+}
+
+.comments-sidebar button[class*="close"],
+.comments-sidebar .close-btn,
+[class*="comments-panel"] button[class*="close"],
+.side-panel.comments button[class*="close"] {
+    color: var(--text-muted) !important;
+    background: transparent !important;
+    border: none !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 6px !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+.comments-sidebar button[class*="close"]:hover,
+.comments-sidebar .close-btn:hover,
+[class*="comments-panel"] button[class*="close"]:hover {
+    color: var(--text-primary) !important;
+    background: var(--bg-menu-hover) !important;
+}
+
+.comments-sidebar input,
+.comments-sidebar textarea,
+.comments-sidebar [class*="input"],
+[class*="comments-panel"] input,
+[class*="comments-panel"] textarea,
+[class*="comment-input"] {
+    background: rgba(22, 22, 31, 0.7) !important;
+    border: 1px solid var(--border-card) !important;
+    border-radius: 8px !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    padding: 10px 14px !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+.comments-sidebar input::placeholder,
+.comments-sidebar textarea::placeholder,
+[class*="comments-panel"] input::placeholder,
+[class*="comment-input"]::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.comments-sidebar input:focus,
+.comments-sidebar textarea:focus,
+[class*="comments-panel"] input:focus,
+[class*="comment-input"]:focus {
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 2px rgba(255, 94, 114, 0.12) !important;
+    background: rgba(34, 34, 51, 0.6) !important;
+    outline: none !important;
+}
+
+.comments-sidebar button[class*="send"],
+.comments-sidebar button[class*="submit"],
+.comments-sidebar .send-btn,
+[class*="comments-panel"] button[class*="send"] {
+    background: var(--accent-primary) !important;
+    color: #0d0d14 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 8px 14px !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+.comments-sidebar button[class*="send"]:hover,
+.comments-sidebar button[class*="submit"]:hover,
+[class*="comments-panel"] button[class*="send"]:hover {
+    box-shadow: var(--shadow-glow) !important;
+    transform: translateY(-1px) !important;
+}
+
+.comments-sidebar .comment-item,
+.comments-sidebar [class*="comment-item"],
+[class*="comments-panel"] .comment-item {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-card) !important;
+    border-radius: var(--radius-base) !important;
+    padding: 12px !important;
+    margin-bottom: 8px !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+.comments-sidebar .comment-item:hover,
+[class*="comments-panel"] .comment-item:hover {
+    border-color: var(--border-card-hover) !important;
+    transform: translateX(2px) !important;
+}
+
+
+/* ========================================
+   PLAYER SIDEBAR
+   ======================================== */
+.player-sidebar,
+.video-sidebar,
+[class*="player-sidebar"],
+[class*="video-sidebar"],
+.player-side-panel,
+div[class*="sidebar"][class*="player"] {
+    background: linear-gradient(180deg, rgba(22, 22, 31, 0.97) 0%, rgba(17, 17, 24, 0.99) 100%) !important;
+    backdrop-filter: blur(24px) saturate(130%) !important;
+    border-left: 1px solid var(--border-card) !important;
+}
+
+.player-sidebar [class*="title"],
+.player-sidebar [class*="header"],
+.video-sidebar [class*="title"],
+.video-sidebar [class*="header"] {
+    color: var(--text-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    border-bottom: 1px solid var(--border-card) !important;
+    padding: 14px 18px !important;
+}
+
+/* Episode list items */
+.player-episode-item,
+[class*="player-episode-item"],
+.episode-item,
+[class*="episode-list-item"],
+.player-episode-list-item {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-card) !important;
+    border-radius: var(--radius-base) !important;
+    margin-block: 8px !important;
+    padding: 10px !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+.player-episode-item:hover,
+[class*="player-episode-item"]:hover,
+.episode-item:hover,
+[class*="episode-list-item"]:hover {
+    border-color: var(--border-card-hover) !important;
+    transform: translateX(3px) !important;
+}
+
+/* Episode title */
+.player-episode-item [class*="title"],
+.player-episode-item [class*="name"],
+.episode-item [class*="title"],
+.episode-item [class*="name"],
+[class*="episode-list-item"] [class*="title"],
+[class*="episode-list-item"] [class*="name"],
+.player-episode-list-item [class*="title"],
+.player-episode-list-item [class*="name"] {
+    color: var(--text-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+/* Episode description */
+.player-episode-item [class*="description"],
+.player-episode-item [class*="desc"],
+.episode-item [class*="description"],
+[class*="episode-list-item"] [class*="description"],
+.player-episode-list-item [class*="description"] {
+    color: var(--text-muted) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+
+/* Episode number */
+.player-episode-item [class*="number"],
+.player-episode-item [class*="ep-num"],
+.episode-item [class*="number"],
+[class*="episode-list-item"] [class*="number"],
+.player-episode-list-item [class*="number"] {
+    color: var(--accent-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+}
+
+
+/* ========================================
+   PLAYER COMMENTS
+   ======================================== */
+.player-comments,
+[class*="player-comments"],
+.comments-panel,
+[class*="comments-sidebar"],
+div[class*="comments"][class*="panel"] {
+    background: linear-gradient(180deg, rgba(22, 22, 31, 0.97) 0%, rgba(17, 17, 24, 0.99) 100%) !important;
+    backdrop-filter: blur(24px) saturate(130%) !important;
+    border-left: 1px solid var(--border-card) !important;
+    font-family: var(--font-primary) !important;
+}
+
+.player-comments h2,
+.player-comments h3,
+.player-comments [class*="header"],
+[class*="player-comments"] h2,
+[class*="player-comments"] h3,
+.comments-panel h2,
+.comments-panel h3,
+[class*="comments-sidebar"] h2,
+[class*="comments-sidebar"] h3 {
+    color: var(--text-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 14px 18px !important;
+    border-bottom: 1px solid var(--border-card) !important;
+}
+
+.player-comments [class*="count"],
+[class*="player-comments"] [class*="count"],
+.comments-panel [class*="count"],
+[class*="comments-sidebar"] [class*="count"] {
+    color: var(--text-muted) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+}
+
+.player-comments a,
+[class*="player-comments"] a,
+.comments-panel a {
+    color: var(--link-color) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+.player-comments a:hover,
+[class*="player-comments"] a:hover,
+.comments-panel a:hover {
+    color: var(--link-color-hover) !important;
+}
+
+.player-comments input,
+.player-comments textarea,
+.player-comments [class*="input"],
+[class*="player-comments"] input,
+[class*="player-comments"] textarea,
+.comments-panel input,
+.comments-panel textarea {
+    background: rgba(22, 22, 31, 0.6) !important;
+    border: 1px solid var(--border-card) !important;
+    border-radius: 8px !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+    padding: 10px 14px !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+.player-comments input:focus,
+.player-comments textarea:focus,
+[class*="player-comments"] input:focus,
+[class*="player-comments"] textarea:focus,
+.comments-panel input:focus,
+.comments-panel textarea:focus {
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 2px rgba(255, 94, 114, 0.12) !important;
+    outline: none !important;
+}
+
+.player-comments footer,
+.player-comments [class*="footer"],
+[class*="player-comments"] footer,
+.comments-panel footer {
+    background: linear-gradient(180deg, transparent 0%, rgba(17, 17, 24, 0.95) 100%) !important;
+    border-top: 1px solid var(--border-card) !important;
+    padding: 14px 18px !important;
+}
+
+
+/* ========================================
+   SIDEBAR SCROLLBARS & ICONS
+   ======================================== */
+.player-sidebar .scroll-container,
+.video-sidebar .scroll-container,
+[class*="sidebar"] .scroll-container,
+.player-comments .scroll-container,
+[class*="sidebar"] [class*="scroll"],
+[class*="sidebar"] [class*="list"] {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 94, 114, 0.25) transparent !important;
+}
+
+[class*="sidebar"] button[class*="close"],
+[class*="panel"] button[class*="close"],
+.player-comments button[class*="close"] {
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-muted) !important;
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 6px !important;
+    transition: all var(--transition-base) ease !important;
+}
+
+[class*="sidebar"] button[class*="close"]:hover,
+[class*="panel"] button[class*="close"]:hover,
+.player-comments button[class*="close"]:hover {
+    background: var(--bg-menu-hover) !important;
+    color: var(--text-primary) !important;
+}
+
+[class*="sidebar"] svg:not([class*="logo"]),
+.player-comments svg {
+    color: var(--text-muted) !important;
+    transition: color var(--transition-base) ease !important;
+}
+
+[class*="sidebar"] svg:hover,
+.player-comments svg:hover {
+    color: var(--accent-primary) !important;
+}
+
+.bottom-controls [class*="icon"],
+.bottom-controls button svg,
+.player-controls [class*="icon"],
+.player-controls button svg {
+    color: var(--text-muted) !important;
+    transition: all var(--transition-fast) ease !important;
+}
+
+.bottom-controls [class*="icon"]:hover,
+.bottom-controls button:hover svg,
+.player-controls [class*="icon"]:hover,
+.player-controls button:hover svg {
+    color: var(--accent-primary) !important;
+    filter: drop-shadow(0 0 6px rgba(255, 94, 114, 0.4)) !important;
+}
+
+.bottom-controls [class*="icon"].active,
+.bottom-controls button.active svg,
+.player-controls [class*="icon"].active,
+.player-controls button.active svg {
+    color: var(--accent-primary) !important;
+    filter: drop-shadow(0 0 8px rgba(255, 94, 114, 0.5)) !important;
+}
+
+
+/* ========================================
+   FANSUB NAMES
+   ======================================== */
+.fansub-inner .text-block.type-body,
+.fansub .text-block.type-body,
+[class*="fansub"] .text-block.type-body {
+    font-family: var(--font-primary) !important;
+    font-weight: 600 !important;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    :root {
+        --radius-base: 8px;
+        --radius-card: 10px;
+    }
+
+    .comments.svelte-1owsd24,
+    .inner-comments.svelte-1owjemh {
+        min-width: auto;
+        max-width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* LOGO — site güncel sınıfları (çift görünümü önle) */
+html body .topbar.svelte-1ujttsx a.logo-button img,
+html body .topbar.svelte-1ujttsx a.logo-button svg,
+html body .topbar.svelte-1ujttsx a.logo-button .text-block,
+html body .topbar.svelte-1ujttsx a.logo-button #badge,
+html body .topbar.svelte-1ujttsx a.logo.svelte-1ujttsx img,
+html body .topbar.svelte-1ujttsx a.logo.svelte-1ujttsx .text-block,
+html body .topbar.svelte-1ujttsx a.logo.svelte-1ujttsx #badge {
+    display: none !important;
+}
+
+html body .topbar.svelte-1ujttsx a.logo-button>a.logo.svelte-1ujttsx {
+    display: contents !important;
+}
+
+html body .topbar.svelte-1ujttsx a.logo-button a.logo.svelte-1ujttsx::before,
+html body .topbar.svelte-1ujttsx a.logo-button a.logo.svelte-1ujttsx::after {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* ========================================
+   ARROW / CHEVRON — "İzlemeye Devam Et ›" ve benzeri oklar
+   ======================================== */
+
+/* Split-button ve hyperlink butonlarındaki ok ikonları */
+[class*="split-button"] svg,
+[class*="split-button"] svg path,
+[class*="split-button"] [class*="icon"],
+a.button svg,
+a.button svg path,
+button.button svg,
+button.button svg path,
+.button svg,
+.button svg path,
+/* Genel chevron / navigation okları */
+[class*="chevron"] svg,
+[class*="chevron"] svg path,
+[class*="arrow"] svg,
+[class*="arrow"] svg path,
+[class*="navigate"] svg,
+[class*="navigate"] svg path,
+/* Banner içi oklar */
+#banner [class*="icon"] svg,
+#banner [class*="icon"] svg path,
+[class*="banner"] [class*="icon"] svg,
+[class*="banner"] [class*="icon"] svg path,
+/* Devam et butonu ok kısmı */
+[class*="continue"] svg,
+[class*="continue"] svg path,
+[class*="resume"] svg,
+[class*="resume"] svg path {
+    fill: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    stroke: none !important;
+}
+
+/* Stroke tabanlı oklar */
+[class*="split-button"] svg[stroke],
+a.button svg[stroke],
+[class*="chevron"] svg[stroke],
+[class*="arrow"] svg[stroke],
+#banner [class*="icon"] svg[stroke],
+[class*="banner"] [class*="icon"] svg[stroke] {
+    stroke: var(--accent-primary) !important;
+    fill: none !important;
+}
+
+/* Accent renkli butonlar üzerindeki oklar beyaz kalabilir */
+.button[class*="style-accent"] svg,
+.button[class*="style-accent"] svg path,
+button[class*="style-accent"] svg,
+button[class*="style-accent"] svg path {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+}
