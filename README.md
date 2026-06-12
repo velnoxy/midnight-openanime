@@ -54,6 +54,7 @@ Releases kıdmındaki en son güncellenmiş `midnight.css` dosyasını indirip b
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b5a261ba-e813-41af-86ae-e9a6e5c9f5d7" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/04586ef2-12a9-463f-873b-caa391231788" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4c7249de-951e-4c3a-976e-b863e85fd87b" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1d037c10-72be-4f11-b145-47e0a26f070b" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/3a271529-810c-4f9c-b48c-80be88d6de42" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e4d223ad-0750-498d-be07-7b6dcfccceb6" />
 
